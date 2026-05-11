@@ -7,4 +7,8 @@
     <RootNamespace>Pablo_movie_mvc</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
