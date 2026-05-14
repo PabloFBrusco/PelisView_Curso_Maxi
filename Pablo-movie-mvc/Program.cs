@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Pablo_movie_mvc.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Incluir DB Context
+builder.Services.AddDbContext<MovieDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection") ?? throw new InvalidOperationException("Connection string 'PabloMovieContext' not found.")));
 
 var app = builder.Build();
 
