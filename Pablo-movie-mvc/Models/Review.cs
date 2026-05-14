@@ -18,7 +18,8 @@ namespace Pablo_movie_mvc.Models
         public int PeliculaId { get; set; }
         public string UsuarioId { get; set; }
         //row version for currency control
-
+        [Timestamp]
+        public byte[] Rowversion { get; set; }
 
 
 
